@@ -1,4 +1,4 @@
 # //         Vicyos-conky-orange
 
 
-![Demo](https://i.imgur.com/pmIaRqn.png)
+![Demo](https://i.imgur.com/upYYFpo.png)
