@@ -210,7 +210,7 @@ settings_table = {
     {
         name='upspeedf',
         arg='',
-        max=13700,
+        max=13800,
         bg_colour=0xd9d9d9,
         bg_alpha=0.2,
         fg_colour=0xdd4522,
