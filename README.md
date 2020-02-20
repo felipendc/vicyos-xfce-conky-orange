@@ -1,2 +1,5 @@
 # vicyos-conky-orange
-![Demo](https://i.imgur.com/pmIaRqn.png)
+
+<p align="center">
+  <imgsrc="https://i.imgur.com/pmIaRqn.png">
+</p>
