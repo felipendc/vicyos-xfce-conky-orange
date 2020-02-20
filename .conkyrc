@@ -48,7 +48,7 @@ conky.config = {
 	lua_draw_hook_post = 'conky_main'
 }
 conky.text = [[
-${font Play:normal:size=7}${voffset 11}${color1}${goto 120}${freq_g cpu0} Ghz${alignr 330}${acpitemp} °C
+${font Play:normal:size=10}${voffset 5}${color1}${goto 120}${freq_g} Ghz${alignr 330}
 ${font Play:normal:size=7}${voffset 0}${goto 120}${color1}CPU 1 ${alignr 330}${color1}${cpu cpu0}%
 ${font Play:normal:size=7}${voffset 2}${goto 120}${color1}CPU 2${alignr 330}${color1}${cpu cpu1}%
 ${font Play:normal:size=7}${voffset 2}${goto 120}${color1}CPU 3${alignr 330}${color1}${cpu cpu2}%

@@ -15,9 +15,9 @@ Changelog:
 + v1.1 -- Added options for the starting angle of the rings, and added the "max" variable, to allow for variables that output a numerical value rather than a percentage (29.09.2009)
 + v1.0 -- Original release (28.09.2009)
 
-        arg=conky_parse("${if_up wlan0}wlan0${else}eth0${endif}"),
+        arg=conky_parse("${if_up wlan0}wlan0${else}eno1${endif}"),
         fg_colour=0xf0651f,
-        fg_colour=conky_parse("${if_up wlan0}wlan0${else}eth0${endif}"),
+        fg_colour=conky_parse("${if_up wlan0}wlan0${else}eno1${endif}"),
         conky_parse("${cpu}")
         name=conky_parse("${acpitemp}"),
 ]]
@@ -54,18 +54,18 @@ bg_alpha=0.2
 settings_table = {
     
     {
-        name='acpitemp',
-        arg='',
+        name='cpu',
+        arg='freq_g',
         max=110,
         bg_colour=0xd9d9d9,
         bg_alpha=0.2,
-        fg_colour=0xdd4522,
+        fg_colour=0xdd45,
         fg_alpha=0.8,
         x=200, y=120,
-        radius=97,
+        radius=105,
         thickness=4,
-        start_angle=0,
-        end_angle=240
+        start_angle=-11,
+        end_angle=100
     },
     {
         name='cpu',
@@ -196,7 +196,7 @@ settings_table = {
     {
         name='downspeedf',
         arg='',
-        max=2000,
+        max=13700,
         bg_colour=0xd9d9d9,
         bg_alpha=0.2,
         fg_colour=0xdd4522,
@@ -416,7 +416,7 @@ end
 -- Contrôle de l'interface active
 function iface_watch()
 
-    iface=conky_parse("${if_existing /proc/net/route eth0}eth0${else}wlan0${endif}")
+    iface=conky_parse("${if_existing /proc/net/route eno1}eno1${else}wlan0${endif}")
 
     settings_table[11]['arg']=iface
     settings_table[12]['arg']=iface
