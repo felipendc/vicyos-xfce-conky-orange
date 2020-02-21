@@ -208,6 +208,20 @@ settings_table = {
         end_angle=420
     },
     {
+        name='downspeedf',
+        arg='2',
+        max=13700,
+        bg_colour=0xdd4522,
+        bg_alpha=0.8,
+        fg_colour=0xdd4522,
+        fg_alpha=0.8,
+        x=290, y=346,
+        radius=30,
+        thickness=12,
+        start_angle=180,
+        end_angle=-170
+    },
+    {
         name='upspeedf',
         arg='',
         max=13800,
@@ -222,74 +236,18 @@ settings_table = {
         end_angle=420
     },
     {
-        name='time',
-        arg='%S',
-        max=60,
-        bg_colour=0xd9d9d9,
-        bg_alpha=0.2,
+        name='upspeedf',
+        arg='2',
+        max=13800,
+        bg_colour=0xdd4522,
+        bg_alpha=0.8,
         fg_colour=0xdd4522,
         fg_alpha=0.8,
-        x=230, y=410,
-        radius=30,
-        thickness=12,
-        start_angle=0,
-        end_angle=240
-    },
-    {
-        name='time',
-        arg='%M',
-        max=60,
-        bg_colour=0xd9d9d9,
-        bg_alpha=0.2,
-        fg_colour=0xdd4522,
-        fg_alpha=0.8,
-        x=230, y=410,
+        x=290, y=346,
         radius=18,
         thickness=8,
-        start_angle=0,
-        end_angle=240
-    },
-    {
-        name='time',
-        arg='%H',
-        max=24,
-        bg_colour=0xd9d9d9,
-        bg_alpha=0.2,
-        fg_colour=0xdd4522,
-        fg_alpha=0.8,
-        x=230, y=410,
-        radius=10,
-        thickness=4,
-        start_angle=0,
-        end_angle=240
-    },
-    {
-        name='battery_percent',
-        arg='BAT1',
-        max=100,
-        bg_colour=0xd9d9d9,
-        bg_alpha=0.2,
-        fg_colour=0xdd4522,
-        fg_alpha=0.8,
-        x=274, y=464,
-        radius=18,
-        thickness=10,
         start_angle=180,
-        end_angle=420
-    },
-    {
-        name='',
-        arg='',
-        max=100,
-        bg_colour=0xd9d9d9,
-        bg_alpha=0.2,
-        fg_colour=0xdd4522,
-        fg_alpha=0.6,
-        x=274, y=464,
-        radius=3,
-        thickness=13,
-        start_angle=0,
-        end_angle=360
+        end_angle=-176
     },
 }
 
@@ -416,10 +374,11 @@ end
 -- Contrôle de l'interface active
 function iface_watch()
 
-    iface=conky_parse("${if_existing /proc/net/route eno1}eno1${else}wlan0${endif}")
-
+    iface=conky_parse("${if_existing /proc/net/route xeno1}xeno1${else}xwlp3s0${endif}")
+    
     settings_table[11]['arg']=iface
     settings_table[12]['arg']=iface
+    
 end
 
 function conky_draw_bg()
