@@ -80,7 +80,7 @@ ${font Michroma:size=10}${color0}${voffset -360}${goto 328} Vicyos Linux
 ${font Play:normal:size=12}${voffset 30}${goto 320}Uptime${color1}${alignr 60}${uptime_short}
 
 # |--eno1
-${if_existing /proc/net/route eno1}${font Play:normal:size=8}${color1}${alignr 54}${voffset 222}WiFi  ${color1}${wireless_essid eno1}
+${if_existing /proc/net/route eno1}${font Play:normal:size=8}${color1}${alignr 54}${voffset 222}Ethernet  ${color1}${wireless_essid eno1}
 ${font Play:normal:size=8}${color1}${goto 298}${voffset 2}Up${goto 370}${color1}${totalup eno1} / ${color1}${upspeed eno1}
 ${font Play:normal:size=8}${goto 298}${color1}Down${goto 370}${color1}${totaldown eno1} / ${color1}${downspeed eno1}
 ${font Play:normal:size=8}${goto 300}${voffset 2}Local IP${goto 370}${addr eno1}
